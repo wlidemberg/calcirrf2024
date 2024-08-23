@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IRRF 2024</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.css">
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <i class="fa-solid fa-coins"></i>
+            <h1>Calculadora de IRRF</h1>
+        </div>
+       <nav>
+        <ul>
+            <!-- <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li> -->
+            <li><a href=""><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></li>
+        </ul>
+       </nav>
+    </header>
+    <main>
+        <section id="sectionIrrf">
+            <div class="container">
+                <h2>Preencha as Informações</h2>
+                <form id="formIrrf">
+                    <div class="form-group">
+                        <label for="valorBruto">Valor Bruto: </label>
+                        <input type="text" name="valorBruto" class="moeda" id="valorBruto" placeholder="0,00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantDependentes">Dependentes: </label>
+                        <input type="number" name="quantDependentes" id="quantDependentes" placeholder="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="valorPensao">Pensão Alimentícia:</label>
+                        <input type="text" class="moeda" name="valorPensao" id="valorPensao" placeholder="0,00">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="outrasDeducoes">Outras Deduções: </label>
+                        <input type="text" class="moeda" name="outrasDeducoes" id="outrasDeducoes" placeholder="0,00">
+                    </div>
+                    <div class="button-container">
+                        <button id="btnCalcular" class="btn btn-primary" type="submit">Calcular</button>
+                        <!-- <button id="btnLimpar" type="submit">Limpar</button> -->
+                    </div>
+                </form>
+            </div>
+            <div class="container" id="resposta-container">
+                <h2>Resumo do calculo aqui!!</h2>
+                <table>
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Berg Sousa &copy; 2024</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/wlidemberg-sousa-465367101/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/wlidemberg" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/automatizei_berg" target="_blank">
+                        <i class="fa-brands fa-behance"></i>
+                        Behance
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="assets/script.js"></script>
+    <script>
+
+        // aplicarMascaraMoeda = (element) => {
+        //     element.addEventListener('input', (e) =>{
+        //         let value = e.target.value;
+
+        //         // Remove tudo que não for número
+        //         value = value.replace(/\D/g, '');
+
+        //         // Adiciona virgula para os centavos
+        //         value = (value / 100).toFixed(2) + '';
+
+        //         // substitui o ponto por virgula para ficar no formato brasileiro
+        //         value = value.replace('.', ',')
+
+        //         // Adiciona os pontos nos milhares
+        //         value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        //         e.target.value = value;
+
+        //         console.log(value)
+        //     });
+        // }
+
+
+        // document.querySelectorAll('.moeda').forEach((input) => {
+        //     aplicarMascaraMoeda(input);
+        // });
+      
+    </script>
+</body>
+</html>
